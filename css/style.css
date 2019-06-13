@@ -1,0 +1,15 @@
+.text{
+  width: 80%;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.text-h{
+  margin-top: 10%;
+}
+
+.area{
+  width: 300px;
+  height: 7em;
+  line-height: 1.5em;
+}

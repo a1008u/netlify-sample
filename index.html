@@ -3,30 +3,35 @@
 <head>
 <meta charset="UTF-8">
   <title>netlify-sample</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
-  hello netlify
 
-  <form name="contact" method="POST" action="/thank.html" netlify>
-    <p>
-      <label>Your Name: <input type="text" name="name" /></label>   
-    </p>
-    <p>
-      <label>Your Email: <input type="email" name="email" /></label>
-    </p>
-    <p>
-      <label>Your Role: <select name="role[]" multiple>
-        <option value="leader">Leader</option>
-        <option value="follower">Follower</option>
-      </select></label>
-    </p>
-    <p>
-      <label>Message: <textarea name="message"></textarea></label>
-    </p>
-    <p>
-      <button type="submit">Send</button>
-    </p>
-  </form>
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          hello netlify
+        </h1>
+        <h2 class="subtitle">
+          netlifyでの実行だよ
+        </h2>
+      </div>
+    </div>
+  </section>
+  
+  <div class="text columns">
+    <div class="column is-one-third">
+        <a href="/html/input.html" class="button is-primary is-outlined">登録</a>
+    </div>
+    <div class="column">Auto</div>
+    <div class="column">Auto</div>
+  </div>
+
+  
 </body>
 </html>
