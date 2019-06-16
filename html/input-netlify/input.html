@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>netlify-sample</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js">
+	</script>
+</head>
+
+<body>
+	<section class="text text-h">
+		<div class="field">
+			<label class="label">Your Name:</label>
+			<div class="control">
+				<input class="input" id="name" placeholder="Text input" type="text" required>
+			</div>
+		</div>
+		<div class="field">
+			<label class="label">Your Email:</label>
+			<div class="control">
+				<input class="input" id="email" name="email" placeholder="Email input" required type="email">
+			</div>
+		</div>
+		<div class="field">
+			<label class="label">Your Role:</label>
+			<div class="control">
+				<div class="select">
+					<select id="role">
+						<option value="leader">
+							Leader
+						</option>
+						<option value="follower">
+							Follower
+						</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="field">
+			<label class="label">Message:</label>
+			<div class="control">
+				<textarea class="message area" id="message" placeholder="please write to the message"></textarea>
+			</div>
+		</div><button id="button-confirm">確認</button>
+	</section>
+	<script src="../../js/next.js">
+	</script>
+</body>
+</html>
