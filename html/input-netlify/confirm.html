@@ -6,44 +6,62 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
   <link rel="stylesheet" href="../../css/style.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
- 
+  <style>
+  .label {
+    display: block;
+    position: relative;
+  }
+  .label::before,
+  .label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    border-bottom: 1px solid #333;
+  }
+  .label::after {
+    bottom: -5px;
+  }
+  input{
+    border: none;
+  }
+  </style>
 </head>
 
 <body>
-    <section class="text text-h">
-      <div class="field">
-        <label class="label">Your Name:</label>
-        <div id="name" class="control">
-          title
-        </div>
-      </div>
-  
-      <div class="field">
-        <label class="label">Your Email:</label>
-        <div id="email" class="control">
-          title@test.com
-        </div>
-      </div>
-  
-      <div class="field">
-        <label class="label">Your Role: </label>
-        <div class="control" id="role">
-            leader
-          </div>
-        </div>
-      </div>
-  
-      <div class="field">
-        <label class="label">Message: </label>
-        <div class="control" id="message">
-          this is the time to get the power.
-        </div>
-      </div>
-      <p>
-        <button id="button-end">完了</button>
-      </p>
-    </section>
+  <form class="text text-h" name="contact" method="POST" action="./thank.html" data-netlify="true">
+    <div class="field">
+      <label class="label">Your Name:</label>
+      <input id="name" name="name" class="control" />
+    </div>
 
-    <script src="../../js/next-end.js"></script>
+    <div class="field">
+      <label class="label">Your Email:</label>
+      <input id="email" name="email" class="control" />
+    </div>
+
+    <div class="field">
+      <label class="label">Your Role: </label>
+      <input id="role" name="role" class="control" />
+    </div>
+
+    <div class="field">
+      <label class="label">Message: </label>
+      <input id="message" name="message" class="control"/>
+    </div>
+
+    <br />
+    <p>
+      <div class="button is-primary" id="button-end">完了</div>
+    </p>
+    <br />
+    <p>
+      <a class="button is-link" href="./input.html" id="button-back">戻る</a>
+    </p>
+  </form>
+
+    <script src="../../js/input-netlify/next-end.js"></script>
 </body>
 </html>
