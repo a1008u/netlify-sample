@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>netlify-sample</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" rel="stylesheet">
+	<link href="../../css/style.css" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js">
+	</script>
+</head>
+
+<body>
+<form class="text text-h" name="contact" method="POST" netlify>
+		<p>
+			<label>Your Name: <input type="text" name="name"  action="/html/input-not-confirm/thank.html"/></label>
+		</p>
+		<p>
+			<label>Your Email: <input type="email" name="email" /></label>
+		</p>
+		<p>
+			<label>Your Role: <select name="role[]" multiple>
+				<option value="leader">Leader</option>
+				<option value="follower">Follower</option>
+			</select></label>
+		</p>
+		<p>
+			<label>Message: <textarea name="message"></textarea></label>
+		</p>
+		<p>
+			<button type="submit">Send</button>
+		</p>
+	</form>
+	</script>
+</body>
+</html>
