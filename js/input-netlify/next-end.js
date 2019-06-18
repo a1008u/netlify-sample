@@ -5,10 +5,10 @@ window.addEventListener("load", async (event) => {
   form.email.value = sessionStorage.getItem("email")
   form.role.value = sessionStorage.getItem("role")
   form.message.value = sessionStorage.getItem("message")
-  // form.name.disabled = true;
-  // form.email.disabled = true;
-  // form.role.disabled = true;
-  // form.message.disabled = true;
+  form.name.disabled = true;
+  form.email.disabled = true;
+  form.role.disabled = true;
+  form.message.disabled = true;
 
   // const name = document.getElementById("name");
   // const email = document.getElementById("email");
@@ -26,4 +26,12 @@ window.addEventListener("load", async (event) => {
 
 document.getElementById("button-back").addEventListener("click", async ()=>{
   window.location.href = '../input-netlify/input.html';
+})
+
+document.getElementById("button-next").addEventListener("click", async ()=>{
+  const form = document.forms.contact;
+  form.name.disabled = false;
+  form.email.disabled = false;
+  form.role.disabled = false;
+  form.message.disabled = false;
 })
