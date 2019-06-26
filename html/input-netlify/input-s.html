@@ -1,0 +1,214 @@
+<html lang="ja"><script src="chrome-extension://ljdobmomdgdljniojadhoplhkpialdid/page/prompt.js"></script><script src="chrome-extension://ljdobmomdgdljniojadhoplhkpialdid/page/runScript.js"></script><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>tomato 2020 参加応募フォーム</title>
+  <link rel="stylesheet" href="../../css/samaple.css">
+</head>
+<body>
+  <header>
+    <h1>tomato 2020</h1>
+  </header>
+  <main>
+    <div class="mf_lead">
+      <h1>tomato 2020 参加応募フォーム</h1>
+      <p>一般参加者の募集フォームです。<br>
+      とりあえずHTMLざっくり組んでみました。<br>
+      デザインはまだ未定。</p>
+    </div>
+    <section id="mailform_participant_JP" action="" method="post" novalidate="">
+      <dl class="mailform">
+        <dt>参加者氏名<span class="icon_must">必須</span></dt>
+        <dd>
+          <div class="mf_rows">
+            <div class="mf_col5">
+              <input type="text" name="姓" required="required" placeholder="山田" id="name1">
+            </div>
+            <div class="mf_col5">
+              <input type="text" name="名" required="required" placeholder="太郎" id="name2">
+            </div>
+          </div>
+        </dd>
+        <dt>フリガナ<span class="icon_must">必須</span></dt>
+        <dd>
+          <div class="mf_rows">
+            <div class="mf_col5">
+              <input type="text" name="セイ" required="required" placeholder="ヤマダ">
+            </div>
+            <div class="mf_col5">
+              <input type="text" name="メイ" required="required" placeholder="タロウ">
+            </div>
+          </div>
+        </dd>
+        <dt>区分<span class="icon_must">必須</span></dt>
+        <dd class="mf_radiowrap">
+          <div class="mf_rows">
+            <div class="mf_inline">
+              <input class="type_radio-input" type="radio" name="区分" value="法人" required="required" id="type_corporation">
+              <label class="type_radio" for="type_corporation"> 法人</label>
+            </div>
+            <div class="mf_inline">
+              <input class="type_radio-input" type="radio" name="区分" value="個人" id="type_individual">
+              <label class="type_radio" for="type_individual"> 個人</label>
+            </div>
+          </div>
+        </dd>
+        <dt>法人名</dt>
+        <dd><input type="text" data-type="text" name="法人名" placeholder="株式会社インタースペース"></dd>
+        <dt>役職</dt>
+        <dd><input type="text" data-type="text" name="役職" placeholder="マネージャー"></dd>
+        <dt>業種<span class="icon_must">必須</span></dt>
+        <dd class="mf_radiowrap">
+          <div class="mf_rows">
+            <div class="mf_inline">
+              <input class="type_radio-input" type="radio" name="業種" value="メディア" required="required" id="industry_media">
+              <label class="type_radio" for="industry_media"> メディア</label>
+            </div>
+            <div class="mf_inline">
+              <input class="type_radio-input" type="radio" name="業種" value="広告主" id="industry_merchant">
+              <label class="type_radio" for="industry_merchant"> 広告主</label>
+            </div>
+            <div class="mf_inline">
+              <input class="type_radio-input" type="radio" name="業種" value="その他" id="industry_others">
+              <label class="type_radio" for="industry_others"> その他</label>
+            </div>
+          </div>
+        </dd>
+        <dt>パートナーID<span class="mf_memo">アクセストレードにパートナー登録がある場合はIDをご入力ください</span> <i class="fa fa-question-circle" aria-hidden="true"></i></dt>
+        <dd>
+          <input type="text" data-type="number" name="パートナーID" placeholder="000000">
+        </dd>
+        <dt>メールアドレス<span class="icon_must">必須</span></dt>
+        <dd>
+          <input type="email" data-type="email" name="email" required="required" placeholder="sample@xxx.ne.jp" id="email1">
+        </dd>
+        <dt class="mf_mailagain">確認のためもう一度ご入力ください<span class="icon_must">必須</span></dt>
+        <dd>
+          <input type="email" data-type="email" name="confirm_email" required="required" placeholder="sample@xxx.ne.jp" id="email2">
+        </dd>
+        <dt>郵便番号<span class="icon_must">必須</span></dt>
+        <dd class="mf_zipcode">
+          <input type="text" name="郵便番号" required="required" placeholder="1630808">
+          <button type="button" class="button_zipcode">住所を自動入力</button>
+        </dd>
+        <dt>住所<span class="icon_must">必須</span></dt>
+        <dd class="mf_address">
+          <div class="select_arrow">
+            <select name="都道府県" required="required">
+              <option value="" selected="selected">選択して下さい</option>
+              <optgroup label="北海道・東北地方">
+                <option value="北海道">北海道</option>
+                <option value="青森県">青森県</option>
+                <option value="岩手県">岩手県</option>
+                <option value="秋田県">秋田県</option>
+                <option value="宮城県">宮城県</option>
+                <option value="山形県">山形県</option>
+                <option value="福島県">福島県</option>
+              </optgroup>
+              <optgroup label="関東地方">
+                <option value="栃木県">栃木県</option>
+                <option value="群馬県">群馬県</option>
+                <option value="茨城県">茨城県</option>
+                <option value="埼玉県">埼玉県</option>
+                <option value="東京都">東京都</option>
+                <option value="千葉県">千葉県</option>
+                <option value="神奈川県">神奈川県</option>
+              </optgroup>
+              <optgroup label="中部地方">
+                <option value="山梨県">山梨県</option>
+                <option value="長野県">長野県</option>
+                <option value="新潟県">新潟県</option>
+                <option value="富山県">富山県</option>
+                <option value="石川県">石川県</option>
+                <option value="福井県">福井県</option>
+                <option value="静岡県">静岡県</option>
+                <option value="岐阜県">岐阜県</option>
+                <option value="愛知県">愛知県</option>
+              </optgroup>
+              <optgroup label="近畿地方">
+                <option value="三重県">三重県</option>
+                <option value="滋賀県">滋賀県</option>
+                <option value="京都府">京都府</option>
+                <option value="大阪府">大阪府</option>
+                <option value="兵庫県">兵庫県</option>
+                <option value="奈良県">奈良県</option>
+                <option value="和歌山県">和歌山県</option>
+              </optgroup>
+              <optgroup label="四国地方">
+                <option value="徳島県">徳島県</option>
+                <option value="香川県">香川県</option>
+                <option value="愛媛県">愛媛県</option>
+                <option value="高知県">高知県</option>
+              </optgroup>
+              <optgroup label="中国地方">
+                <option value="鳥取県">鳥取県</option>
+                <option value="島根県">島根県</option>
+                <option value="岡山県">岡山県</option>
+                <option value="広島県">広島県</option>
+                <option value="山口県">山口県</option>
+              </optgroup>
+              <optgroup label="九州・沖縄地方">
+                <option value="福岡県">福岡県</option>
+                <option value="佐賀県">佐賀県</option>
+                <option value="長崎県">長崎県</option>
+                <option value="大分県">大分県</option>
+                <option value="熊本県">熊本県</option>
+                <option value="宮崎県">宮崎県</option>
+                <option value="鹿児島県">鹿児島県</option>
+                <option value="沖縄県">沖縄県</option>
+              </optgroup>
+            </select>
+          </div>
+          <input type="text" name="市区町村" placeholder="市区町村" required="required">
+          <input type="text" name="丁目番地" placeholder="丁目番地" required="required">
+          <input type="text" name="建物名" placeholder="建物名・号室">
+        </dd>
+        <dt>電話番号<span class="icon_must">必須</span></dt>
+        <dd>
+          <input type="tel" data-type="tel" name="電話番号" required="required" placeholder="0353398680">
+        </dd>
+        <dt>質問</dt>
+        <dd>
+          <textarea name="備考欄" rows="4" placeholder="質問がある場合はこちらにご記入ください。"></textarea>
+        </dd>
+
+        <dt>年齢確認<span class="icon_must">必須</span></dt>
+        <dd>
+          <div class="comment">
+            <p>お申込者様が18歳以上である場合だけ「18歳以上です」にチェックしてください。<br>（18歳未満のご参加はご遠慮いただいております）</p>
+          </div>
+          <div class="text_center">
+            <div class="mf_checkwrap">
+              <input type="checkbox" required="required" data-exc="1" name="年齢確認" value="18歳以上です" id="sendcheck">
+              <label> 18歳以上です</label>
+            </div>
+          </div>
+        </dd>
+        <dt>個人情報の取り扱いについて<span class="icon_must">必須</span></dt>
+        <dd>
+          <div class="comment">
+            <p>本ページでご入力いただく個人情報は、tomatoについての連絡に利用させていただきます。<br>お問合せいただいたお客様の個人情報の利用目的及び管理などの取り扱いにつきましては、プライバシーポリシーをご確認ください。<br>
+              <a href="https://www.accesstrade.ne.jp/privacy" target="_blank"></a>プライバシーポリシー</a></p>
+          </div>
+          <div class="text_center">
+            <div class="mf_checkwrap">
+              <input type="checkbox" required="required" data-exc="1" name="個人情報確認" value="個人情報の取扱いに同意する" id="privacy">
+              <label> 個人情報の取扱いに同意する</label>
+            </div>
+          </div>
+        </dd>
+      </dl>
+      <div class="mf_confirm">
+        <button id="button-confirm" type="submit" class="button_mfconfirm">確認画面へ</button>
+      </div>
+      <div class="mf_confirm">
+        <button id="button-confirm" type="submit" class="button_mfconfirm button_mfconfirm_disable">確認画面へ</button>
+      </div>
+    </section>
+
+  </main>
+  <footer>
+    <p>フッターです</p>
+  </footer>
+  <script src="../../js/input-netlify/next-s.js"></script>
+</body>
+</html>
