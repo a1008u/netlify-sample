@@ -31,7 +31,7 @@
 </head>
 
 <body>
-  <form class="text text-h" name="contact" method="POST" action="/html/input-netlify/thank.html" data-netlify-recaptcha="true" netlify>
+  <form class="text text-h" name="contact" method="POST" data-netlify-recaptcha="true" action="/html/input-netlify/thank.html" netlify>
     <p>
       <label class="label">Your Name: </label>
       <input id="name" type="text" name="name" />
@@ -51,6 +51,9 @@
       <label class="label">Message: </label>
       <input id="message" name="message" ></input>
     </p>
+
+
+    <div data-netlify-recaptcha="true"></div>
 
     <br />
     <p>
